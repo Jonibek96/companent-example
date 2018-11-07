@@ -1,0 +1,22 @@
+<!--<h3>Список добавления машины</h3>-->
+<!--<tr>-->
+  <!--<td class="td1">1. Названый машина </td>-->
+  <!--&lt;!&ndash;<td><input type="text" class="form-control" [(ngModel)]="carName" id="inp"></td>&ndash;&gt;-->
+  <!--<td><input type="text" class="form-control" #carNameInput id="inp"></td>-->
+  <!--<td class="td1">2. Год выпуска </td>-->
+  <!--&lt;!&ndash;<td><input type="text" class="form-control" [(ngModel)]="carYear"></td>&ndash;&gt;-->
+  <!--<td><input type="text" class="form-control" #carYearInput></td>-->
+  <!--<td class="td1">3. Мощность </td>-->
+  <!--<td><input type="text" class="form-control" [(ngModel)]="carSpeed" ></td>-->
+<!--</tr>-->
+<!--&lt;!&ndash;<button class="btn btn-primary" (click)="addCar()"> Добавить машины</button>&ndash;&gt;-->
+<!--<hr>-->
+<!--<div id="div1">-->
+<!--<button class="btn btn-primary" (click)="addCar(carNameInput)"> Добавить машины</button>-->
+<!--<button class="btn btn-success" (click)="changCarName()">Изменить имя машины</button>-->
+<!--<button class="btn btn-danger" (click)="deleteCar()">Удалить машнины</button>-->
+<!--</div>-->
+<!--<hr>-->
+<input class="form-control" #carNameInput>
+<input class="form-control" #carYearInput>
+<button class="btn btn-primary" (click)="addCar(carNameInput)">Добавить мащину</button>

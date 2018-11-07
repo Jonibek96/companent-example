@@ -1,0 +1,30 @@
+<p>Форма добавление машины</p>
+<hr>
+<app-add-car (onAddcar)="updateCarList($event)"></app-add-car>
+
+<button class="btn btn-success" (click)="changeCarName()">Изменить имя машины</button>
+<button class="btn btn-danger" (click)="deleteCar()">Удалить машину</button>
+<div class="list-group">
+<app-car class="list-group-item" *ngFor="let car of cars" [carItem]="car" [name]="car" >
+  <h4 #carHeading class="list-group-item-heading">Названиe: {{car.name}}</h4>
+  <p class="list-group-item-text">Год: {{car.year}}</p>
+</app-car>
+</div>
+
+
+<!--<h3>Список добавления машины</h3>-->
+<!--<tr>-->
+<!--<td class="td1">1. Названый машина </td>-->
+<!--<td><input type="text" class="form-control" [(ngModel)]="carName" id="inp"></td>-->
+<!--<td class="td1">2. Год выпуска </td>-->
+<!--<td><input type="text" class="form-control" [(ngModel)]="carYear"></td>-->
+<!--<td class="td1">3. Мощность </td>-->
+<!--<td><input type="text" class="form-control" [(ngModel)]="carSpeed" ></td>-->
+<!--</tr>-->
+<!--<button class="btn btn-primary" (click)="addCar()"> Добавить машины</button>-->
+
+
+<!--<app-add-car (onAddcar)="updateCarList($event)"></app-add-car>-->
+
+<!--<app-car class="list-group-item" *ngFor="let car of cars;  let i = index" [idx]="i" [carItem] = "car"></app-car>-->
+

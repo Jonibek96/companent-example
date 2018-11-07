@@ -1,0 +1,46 @@
+
+<fieldset>
+          <legend>Дохил кардани донишҷу</legend>
+      <table>
+              <tr>
+                  <td>1.Ном</td>
+                  <td><input type="text" class="form-control" [(ngModel)]="donName"></td>
+              </tr>
+              <tr>
+                  <td>2.Насаб</td>
+                  <td><input type="text" class="form-control" [(ngModel)]="donNas"></td>
+              </tr>
+              <tr>
+                  <td>3.Курс</td>
+                  <td><input type="text" class="form-control" [(ngModel)]="donCours" ></td>
+              </tr>
+              <tr>
+                  <td>4.Гуруҳ</td>
+                  <td><input type="text" class="form-control" [(ngModel)]="donGur" ></td>
+              </tr>
+      </table>
+      <hr>
+              <p *ngIf="!addDonStatus" [ngStyle]="{'color': 'red'}">Донишҷу дохил карда нашудааст!</p>
+              <p *ngIf="addDonStatus" [ngStyle]="{'color': 'blue'}" >Донишҷу дохил карда шуд! </p>
+              <button class="btn btn-primary" (click)="addDon()">Дохил кардан</button>
+              <button class="btn btn-primary" (click)="deleteInp()">Тоза кардан</button>
+
+ </fieldset>
+      <hr id="hr" >
+
+<!-- Кисмати амали-->
+
+<table border="1" style="width:100%" >
+  <tr>
+    <th>Ном</th>
+    <th>Насаб</th>
+    <th>Курс</th>
+    <th>Гуруҳ</th>
+  </tr>
+  <tr *ngFor="let st of students" >
+    <td>{{st.nom }}</td>
+    <td>{{st.nasab}}</td>
+    <td>{{st.cours}}</td>
+    <td>{{st.guruh}}</td>
+  </tr>
+</table>
